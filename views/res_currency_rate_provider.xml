@@ -52,7 +52,7 @@
                             <field name="service" />
                             <field name="currency_name" invisible="1" />
                             <div
-                                attrs="{'invisible':['|',('service','!=','BCV'),('currency_name','=','VEF')]}"
+                                attrs="{'invisible':['|',('service','!=','BCV'),('currency_name','=','VES')]}"
                                 class="alert alert-warning"
                                 colspan="2"
                                 role="alert"

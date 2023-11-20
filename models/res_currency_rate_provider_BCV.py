@@ -35,7 +35,7 @@ class ResCurrencyRateProviderBCV(models.Model):
             return super()._get_supported_currencies()
 
         # Lista de monedas desde el archivo Excel
-        return ["VEF", "USD"] 
+        return ["VES", "USD"] 
                
 
     def _obtain_rates(self, base_currency, currencies, date_from, date_to):
@@ -76,8 +76,8 @@ class ResCurrencyRateProviderBCV(models.Model):
         # Crear un diccionario con las tasas de cambio
 
         content = {
-        fecha_valor: {"VEF": 1.0},  # Tipo de cambio del bolívar venezolano (VES) a dólar estadounidense (USD)
-        fecha_valor: {"USD": float(tipo_cambio_usd.replace(',', '.'))}  # Tipo de cambio del dólar estadounidense (USD) a bolívar venezolano (VEF)
+        fecha_valor: {"VES": 1.0},  # Tipo de cambio del bolívar venezolano (VES) a dólar estadounidense (USD)
+        fecha_valor: {"USD": float(tipo_cambio_usd.replace(',', '.'))}  # Tipo de cambio del dólar estadounidense (USD) a bolívar venezolano (VES)
          }
         
         print(content)
